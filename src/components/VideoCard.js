@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utility/appSlice";
 
 export const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
@@ -9,7 +11,7 @@ export const VideoCard = ({ info }) => {
     <div className="flex flex-col w-[19vw] h-[50vh] rounded-lg shadow-md p-2 mr-4 mb-3">
       <div>
         <img
-          className=" bg-cover w-[19vw] h-[28vh] rounded-lg"
+          className=" bg-cover w-[19vw] h-[28vh] rounded-lg object-cover"
           src={thumbnails.high.url}
           alt="thumbnails"
         />

@@ -5,7 +5,7 @@ export const VIDEO_API =
   GOOGLE_API;
 
 export const YOUTUBE_SEARCH_API_LINK =
-  "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+  "https://cors-anywhere.herokuapp.com/http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const YOUTUBE_SEARCH_QUERY =
   " https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&type=video&key=" +

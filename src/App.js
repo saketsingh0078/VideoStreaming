@@ -37,9 +37,6 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <BrowserRouter>
-          <Head />
-        </BrowserRouter>
         <RouterProvider router={appRouter} />
       </div>
     </Provider>
