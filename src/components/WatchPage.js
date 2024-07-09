@@ -4,6 +4,7 @@ import { closeMenu } from "../utility/appSlice";
 import { useSearchParams } from "react-router-dom";
 import { CommentsContainer } from "./CommentsContainer";
 import { LiveChat } from "./LiveChat";
+import { clearMessage } from "../utility/chatSlice";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -11,6 +12,7 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
+    dispatch(clearMessage());
   }, []);
   return (
     <div className="px-8 py-5 flex w-full">
