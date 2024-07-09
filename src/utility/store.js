@@ -3,6 +3,7 @@ import appReducer from "./appSlice";
 import searchReducer from "./searchSlice";
 import searchVideoReducer from "./searchResultSlice";
 import searchQueryReducer from "./searchQuerySlice";
+import chatReducer from "./chatSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     search: searchReducer,
     searchResult: searchVideoReducer,
     searchQuery: searchQueryReducer,
+    chat: chatReducer,
   },
 });
 
