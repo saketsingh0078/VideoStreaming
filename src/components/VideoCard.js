@@ -1,6 +1,4 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { toggleMenu } from "../utility/appSlice";
 
 export const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
@@ -24,7 +22,8 @@ export const VideoCard = ({ info }) => {
         <div className="flex flex-col mx-1">
           <h1 className="font-semibold">{title}</h1>
           <h3 className="">
-            {channelTitle} <span className="text-sm">✔️</span>
+            {channelTitle}
+            <span className="text-sm">✔️</span>
           </h3>
           <h3>{statistics.viewCount} views</h3>
         </div>

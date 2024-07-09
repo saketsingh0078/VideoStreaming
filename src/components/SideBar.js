@@ -3,6 +3,29 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleMenu } from "../utility/appSlice";
 
+const SidebarList = {
+  you: ["History", "Playlists", "Watch later"],
+  subscription: [
+    "The Trade Room",
+    "THE INDIAN TRADER",
+    "PaisaToBanega",
+    "All subscriptions",
+  ],
+  explore: [
+    "Trending",
+    "Shopping",
+    " Music",
+    "Movies",
+    "Live",
+    "Gaming",
+    "News",
+    "Sports",
+    "Courses",
+    "Fashion & Beauty",
+    "Podcats",
+  ],
+};
+
 const SideBar = () => {
   const dispatch = useDispatch();
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -32,36 +55,27 @@ const SideBar = () => {
           You <span>{">"}</span>
         </h1>
         <ul>
-          <li>History</li>
-          <li>Playlists</li>
-          <li>Watch later</li>
+          {SidebarList.you.map((elem, index) => (
+            <li key={index}>{elem}</li>
+          ))}
         </ul>
       </div>
 
       <div className="border-b-2 border-gray-200 shadow-sm px-4 py-3">
         <h1 className="font-bold text-lg">Subscriptions</h1>
         <ul>
-          <li>The Trade Room</li>
-          <li>THE INDIAN TRADER</li>
-          <li>PaisaToBanega</li>
-          <li>All subscriptions</li>
+          {SidebarList.subscription.map((elem, index) => (
+            <li key={index}>{elem}</li>
+          ))}
         </ul>
       </div>
 
       <div className="border-b-2 border-gray-200 shadow-sm px-4 py-3">
         <h1 className="font-bold text-lg">Explore</h1>
         <ul>
-          <li>Trending</li>
-          <li>Shopping</li>
-          <li>Music</li>
-          <li>Movies</li>
-          <li>Live</li>
-          <li>Gaming</li>
-          <li>News</li>
-          <li>Sports</li>
-          <li>Courses</li>
-          <li>Fashion & Beauty</li>
-          <li>Podcats</li>
+          {SidebarList.explore.map((elem, index) => (
+            <li key={index}>{elem}</li>
+          ))}
         </ul>
       </div>
     </div>
