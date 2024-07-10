@@ -35,6 +35,7 @@ const Head = () => {
 
   const getSearchSuggestions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API_LINK + searchQuery);
+
     const json = await data.json();
     setSuggestions(json[1]);
 
@@ -100,7 +101,7 @@ const Head = () => {
           onBlur={() => setShowSuggestions(false)}
         />
         <button
-          className="border-2 border-black rounded-r-full px-3 py-1 hover:bg-slate-50"
+          className="border-y-2 border-r-2 border-black rounded-r-full px-3 py-1 hover:bg-slate-50"
           onClick={handleSearchClick}
         >
           <img

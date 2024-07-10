@@ -33,7 +33,6 @@ export const LiveChat = () => {
         className="border-x-2 border-b-2  border-black"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(liveMessage);
           dispatch(
             addMessage({
               name: "Saket Singh",
