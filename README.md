@@ -11,5 +11,5 @@ Designed and developed a nested comment system to facilitate structured user dis
 #To run in local :
 
 1. clone the project
-2. npm i
+2. npm install
 3. npm run start
